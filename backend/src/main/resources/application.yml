@@ -1,0 +1,57 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:  ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD} # Mật khẩu ứng dụng của Gmail
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+        transport.protocol: smtp
+        debug: true # Tùy chọn: Thêm để theo dõi chi tiết quá trình gửi email
+
+cloudinary:
+  cloud-name: ddp72k7ps
+  api-key: ${CLOUDINARY_API_KEY}
+  api-secret: ${CLOUDINARY_API_SECRET}
+
+cscApi:
+  key:  ${API_KEY}
+
+logging:
+  level:
+    root: INFO
+    org.springframework.mail: DEBUG
+    org.springframework.web: DEBUG
+
+application:
+  security:
+    jwt:
+      secret-key:  ${JWT_SECRET_KEY}
+      expiration: 604800000 # 7 days
+      refresh-token:
+        expiration: 604800000 # 7 days
