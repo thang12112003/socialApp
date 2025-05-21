@@ -5,19 +5,19 @@ import {
   ComponentPortal
 } from "./chunk-DEGCIOYJ.js";
 import {
-  moveUpMotion
-} from "./chunk-XZIVNFZQ.js";
-import {
   NzOutletModule,
   NzStringTemplateOutletDirective
 } from "./chunk-LLF5WQGB.js";
 import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
-import {
   NzSingletonService
 } from "./chunk-P3OKEVSS.js";
+import {
+  moveUpMotion
+} from "./chunk-XZIVNFZQ.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
 import {
   NzConfigService
 } from "./chunk-7ZIF5OVP.js";
@@ -683,4 +683,4 @@ export {
   NzMessageModule,
   NzMessageService
 };
-//# sourceMappingURL=chunk-O4TCHRGW.js.map
+//# sourceMappingURL=chunk-W657AHCD.js.map

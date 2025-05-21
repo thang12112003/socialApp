@@ -1,10 +1,10 @@
 import {
-  timeUnits
-} from "./chunk-5JIJJDAK.js";
-import {
   NzSkeletonComponent,
   NzSkeletonModule
 } from "./chunk-SLCNH7PU.js";
+import {
+  timeUnits
+} from "./chunk-5JIJJDAK.js";
 import {
   NzOutletModule,
   NzStringTemplateOutletDirective

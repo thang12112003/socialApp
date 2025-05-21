@@ -1,10 +1,10 @@
 import { inject, Injectable } from '@angular/core';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
-import { NotificationComponent } from './modals/notification/notification.component';
-import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable } from 'rxjs';
+import { NotificationComponent } from '../modals/notification/notification.component';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'

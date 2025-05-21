@@ -13,10 +13,10 @@ import {
   inNextTick,
   warn
 } from "./chunk-444SWNZ7.js";
-import "./chunk-PBTJFNNQ.js";
 import {
   NG_VALUE_ACCESSOR
 } from "./chunk-KRHF3YPG.js";
+import "./chunk-PBTJFNNQ.js";
 import {
   DOCUMENT,
   NgIf,

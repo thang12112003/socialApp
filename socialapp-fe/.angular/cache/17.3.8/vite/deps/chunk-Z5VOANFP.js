@@ -13,12 +13,12 @@ import {
   NzNoAnimationDirective
 } from "./chunk-I3C6U56M.js";
 import {
-  zoomBigMotion
-} from "./chunk-XZIVNFZQ.js";
-import {
   NzOutletModule,
   NzStringTemplateOutletDirective
 } from "./chunk-LLF5WQGB.js";
+import {
+  zoomBigMotion
+} from "./chunk-XZIVNFZQ.js";
 import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
@@ -781,4 +781,4 @@ export {
   NzToolTipComponent,
   NzToolTipModule
 };
-//# sourceMappingURL=chunk-WFN6SJLD.js.map
+//# sourceMappingURL=chunk-Z5VOANFP.js.map

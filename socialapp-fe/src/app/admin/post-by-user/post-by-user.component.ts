@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
 import { GalleryItem, GalleryModule, ImageItem } from 'ng-gallery';
 import { TimeagoModule } from 'ngx-timeago';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { SharedService } from '../../shared/shared.service';
 import { ToastrService } from 'ngx-toastr';
+import { SharedService } from '../../shared/services/shared.service';
 
 @Component({
   selector: 'app-post-by-user',

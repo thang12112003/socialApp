@@ -13,18 +13,15 @@ import {
 } from "./chunk-AD6V3VGO.js";
 import "./chunk-EH3HCSPL.js";
 import "./chunk-5JIJJDAK.js";
-import {
-  NzAvatarComponent,
-  NzAvatarModule
-} from "./chunk-54N2OXEI.js";
 import "./chunk-DEGCIOYJ.js";
 import {
   NzOutletModule,
   NzStringTemplateOutletDirective
 } from "./chunk-LLF5WQGB.js";
-import "./chunk-3TUHMKZG.js";
-import "./chunk-3JSU54FM.js";
-import "./chunk-IDCCK3LW.js";
+import {
+  NzAvatarComponent,
+  NzAvatarModule
+} from "./chunk-HBWMTJ5T.js";
 import {
   NzDestroyService
 } from "./chunk-P3OKEVSS.js";
@@ -33,9 +30,12 @@ import "./chunk-IGQ5H5G3.js";
 import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import "./chunk-PUPELI3W.js";
+import "./chunk-3JSU54FM.js";
 import "./chunk-E5TUG3TZ.js";
 import "./chunk-7ZIF5OVP.js";
 import "./chunk-444SWNZ7.js";
+import "./chunk-IDCCK3LW.js";
 import "./chunk-PBTJFNNQ.js";
 import "./chunk-SHIUUSE2.js";
 import "./chunk-C4KMBTLC.js";

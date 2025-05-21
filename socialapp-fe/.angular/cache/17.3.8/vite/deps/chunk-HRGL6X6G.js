@@ -3,12 +3,12 @@ import {
   NzStringTemplateOutletDirective
 } from "./chunk-LLF5WQGB.js";
 import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
-import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
 import {
   NzConfigService,
   WithConfig
@@ -774,4 +774,4 @@ export {
   NzProgressComponent,
   NzProgressModule
 };
-//# sourceMappingURL=chunk-6H4BYHJY.js.map
+//# sourceMappingURL=chunk-HRGL6X6G.js.map

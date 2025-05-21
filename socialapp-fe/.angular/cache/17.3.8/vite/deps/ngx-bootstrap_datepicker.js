@@ -8,16 +8,16 @@ import {
   warnOnce
 } from "./chunk-OZVERYNH.js";
 import {
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR
+} from "./chunk-KRHF3YPG.js";
+import {
   animate,
   state,
   style,
   transition,
   trigger
 } from "./chunk-RDJJSLCP.js";
-import {
-  NG_VALIDATORS,
-  NG_VALUE_ACCESSOR
-} from "./chunk-KRHF3YPG.js";
 import {
   AsyncPipe,
   CommonModule,

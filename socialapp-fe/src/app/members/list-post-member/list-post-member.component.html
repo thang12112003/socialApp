@@ -1,78 +1,131 @@
 <div class="posts-container">
-    @if (isLoading) {
+  @if (isLoading) {
     <div class="loading-spinner">
-        <i class="bi bi-arrow-repeat spin"></i>
-        Loading posts...
+      <i class="bi bi-arrow-repeat spin"></i>
+      Đang tải bài viết...
     </div>
-    } @else if (listPostMember.length === 0) {
+  } @else if (listPostMember.length === 0) {
     <div class="no-posts">
-        <i class="bi bi-journal-x"></i>
-        No posts to display
+      <i class="bi bi-journal-x"></i>
+      Không có bài viết để hiển thị
     </div>
-    } @else {
-
+  } @else {
     @for (item of listPostMember; track item.id) {
-    <div class="post-card">
+      <div class="post-card">
         <!-- Post Header -->
         <div class="post-header">
-            <div class="user-info">
-                <div class="profile-circle">
-                    <img [src]="member?.photoUrl || getPhotoMainCurrentUser() || './assets/avatar.png'"
-                        alt="User Avatar" class="avatar">
-                </div>
-                <div class="user-details">
-                    <h5 class="username">{{ member?.knowAs || getKnowAsCurrentUser() }}</h5>
-                    <div class="post-metadata">
-                        <span class="post-time" *ngIf="item.updatedAt === null">
-                            <ng-container *ngIf="(item.createdAt | timeago) === '1 day ago'; else displayDate">
-                                {{ item.createdAt | date: 'short' }}
-                            </ng-container>
-                            <ng-template #displayDate>
-                                {{ item.createdAt | timeago }}
-                            </ng-template>
-                        </span>
-
-                        <span class="post-time" *ngIf="item.updatedAt !== null">
-                            Edit at {{ item.updatedAt | date: 'short' }}
-                        </span>
-                    </div>
-                </div>
+          <div class="user-info">
+            <div class="profile-circle">
+              <img
+                [src]="getMainPhotoUrl(member?.photos) || getPhotoMainCurrentUser() || './assets/avatar.png'"
+                [alt]="member?.knowAs || getKnowAsCurrentUser() || 'Unknown User'"
+                class="avatar"
+              >
             </div>
-
-            @if (item.user.id === currentUserId) {
+            <div class="user-details">
+              <h5 class="username">{{ member?.knowAs || getKnowAsCurrentUser() }}</h5>
+              <div class="post-metadata">
+                <span class="post-time" *ngIf="item.updatedAt === null">
+                  <ng-container *ngIf="(item.createdAt | timeago) === '1 day ago'; else displayDate">
+                    {{ item.createdAt | date: 'short' }}
+                  </ng-container>
+                  <ng-template #displayDate>
+                    {{ item.createdAt | timeago }}
+                  </ng-template>
+                </span>
+                <span class="post-time" *ngIf="item.updatedAt !== null">
+                  Chỉnh sửa lúc {{ item.updatedAt | date: 'short' }}
+                </span>
+              </div>
+            </div>
+          </div>
+          @if (item.user.id === currentUserId) {
             <div class="dropdown">
-                <button class="btn btn-link dropdown-toggle" type="button" [id]="'dropdownMenu' + item.id"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-three-dots"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" [attr.aria-labelledby]="'dropdownMenu' + item.id">
-                    <li>
-                        <a class="dropdown-item" (click)="openEditPostModal(item)">
-                            <i class="bi bi-pencil-fill me-2"></i> Edit
-                        </a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <a class="dropdown-item text-danger" (click)="deletePost(item.id)">
-                            <i class="bi bi-trash-fill me-2"></i> Delete
-                        </a>
-                    </li>
-                </ul>
+              <button
+                class="btn btn-link dropdown-toggle"
+                type="button"
+                [id]="'dropdownMenu' + item.id"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-three-dots"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" [attr.aria-labelledby]="'dropdownMenu' + item.id">
+                <li>
+                  <a class="dropdown-item" (click)="openEditPostModal(item)">
+                    <i class="bi bi-pencil-fill me-2"></i> Chỉnh sửa
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item text-danger" (click)="deletePost(item.id)">
+                    <i class="bi bi-trash-fill me-2"></i> Xóa
+                  </a>
+                </li>
+              </ul>
             </div>
-            }
+          }
         </div>
 
         <!-- Post Content -->
         <div class="post-content">
-            <p>{{ item.content }}</p>
+          <p>{{ item.content }}</p>
         </div>
-        <gallery *ngIf="photoTab?.active" [id]="'gallery-' + item.id" [items]="imagesByPost.get(item.id) || []"
-            thumbPosition="left">
-        </gallery>
-        
-    </div>
+        <gallery
+          *ngIf="photoTab?.active"
+          [id]="'gallery-' + item.id"
+          [items]="imagesByPost.get(item.id) || []"
+          thumbPosition="left"
+        ></gallery>
+
+        <!-- Like and Comment Actions -->
+        <div class="post-actions" style="margin-top: 10px;">
+          <button class="btn btn-sm" (click)="toggleLike(item.id)" style="margin-left: -18px;">
+            <i
+              *ngIf="isPostLiked(item.id)"
+              style="font-size: 2rem; color: rgb(199, 0, 0);"
+              class="bi bi-heart-fill"
+            ></i>
+            <i *ngIf="!isPostLiked(item.id)" style="font-size: 2rem;" class="bi bi-heart"></i>
+          </button>
+          <a (click)="showListUserLikeModal(item.id)" class="fw-bold">
+            <span style="color: black;">{{ likeCounts.get(item.id) || 0 }} người thích bài viết này</span>
+          </a>
+          <button class="btn btn-sm" (click)="showCommentModal(item.id)" style="margin-left: 10px;">
+            <i style="font-size: 2rem;" class="bi bi-chat"></i>
+          </button>
+          <a (click)="showCommentModal(item.id)" class="fw-bold">
+            <span style="color: black;">{{ commentCounts.get(item.id) || 0 }} bình luận</span>
+          </a>
+        </div>
+
+        <!-- Comment List -->
+        <div class="comment-section" *ngIf="(commentsByPost.get(item.id) || []).length > 0">
+          <ng-container *ngFor="let comment of commentsByPost.get(item.id)">
+            <div class="comment" *ngIf="comment.user">
+              <div class="comment-header">
+                <img
+                  [src]="getMainPhotoUrl(comment.user.photoUrl) || './assets/avatar.png'"
+                  [alt]="comment.user.knowAs || 'Unknown User'"
+                  class="comment-avatar"
+                >
+                <div class="comment-details">
+                  <span class="comment-username">{{ comment.user.knowAs || 'Unknown User' }}</span>
+                  <span class="comment-time">{{ comment.createdAt | timeago }}</span>
+                </div>
+                <div class="comment-actions" *ngIf="comment.user.id === currentUserId">
+                  <button class="btn btn-link btn-sm" (click)="deleteComment(comment.id, item.id)">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </div>
+              <p class="comment-content">{{ comment.content }}</p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
     }
-    }
+  }
 </div>

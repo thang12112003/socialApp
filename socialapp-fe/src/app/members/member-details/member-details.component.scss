@@ -280,3 +280,17 @@
     transform: translateY(0);
   }
 }
+
+.no-posts {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  margin: 1rem 0;
+
+  i {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+  }
+}

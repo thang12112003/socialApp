@@ -19,6 +19,7 @@ export const jwtInterceptor: HttpInterceptorFn = (req, next) => {
         Authorization: `Bearer ${user.jwt}`,
       },
     });
+    console.log('Request with JWT:', req);
   }
 
   return next(req);

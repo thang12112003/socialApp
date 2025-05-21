@@ -1,6 +1,6 @@
 <div class="modern-container">
     <div class="login-box">
-        <img src="assets/logo/logo-main.png" alt="Logo" class="brand-logo">
+        <img src="assets/logo/flynk-logo-main.png" alt="Logo" class="brand-logo">
         <p class="brand-tagline">Your unique social experience starts here</p>
         
         <form [formGroup]="loginForm" (ngSubmit)="login()" autocomplete="off">
@@ -44,9 +44,10 @@
 
             <button type="submit" class="signin-button">Sign In</button>
             
-            <a routerLink="/account/send-email/forgot-username-or-password" class="forgot-link">
+            <!-- <a routerLink="/account/send-email/forgot-username-or-password" class="forgot-link">
                 Forgot your password?
-            </a>
+            </a> -->
+            <div class="forgot-link">Forgot your password?</div>
         </form>
 
         <div class="signup-section">

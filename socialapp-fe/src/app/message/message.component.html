@@ -2,16 +2,17 @@
   <!-- Chat list sidebar -->
   <div class="friends-list">
     <div class="friends-header">Chats</div>
-    <ng-container *ngIf="privateChats$ | async as privateChats">
-      <div *ngFor="let user of privateChats.keys()" class="friend-item" (click)="handleReceiverName(user)" [class.active]="recipient === user">
-        <img [src]="avatarMap.get(user) || 'assets/avatar.png'" [alt]="user" class="friend-avatar">
-        <span class="friend-name">{{ user }}</span>
-        <ng-container *ngIf="newMessagesMap$ | async as newMessagesMap">
-          <span *ngIf="newMessagesMap.get(user)" class="friend-status new-message"></span>
-        </ng-container>
-      </div>
-
-    </ng-container>
+    <div class="friends-list-content">
+      <ng-container *ngIf="privateChats$ | async as privateChats">
+        <div *ngFor="let user of privateChats.keys()" class="friend-item" (click)="handleReceiverName(user)" [class.active]="recipient === user">
+          <img [src]="avatarMap.get(user) || 'assets/avatar.png'" [alt]="user" class="friend-avatar">
+          <span class="friend-name">{{ user }}</span>
+          <ng-container *ngIf="newMessagesMap$ | async as newMessagesMap">
+            <span *ngIf="newMessagesMap.get(user)" class="friend-status new-message"></span>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
   </div>
 
   <!-- Chat window -->
@@ -25,56 +26,64 @@
       </div>
     </div>
 
+    <!-- video -->
     <div class="chat-messages">
-      <div *ngIf="showCallNotification" class="call-notification">
-      <img
-        [src]="avatarMap.get(incomingCall!.senderName) || 'assets/avatar.png'"
-        alt="Caller Avatar"
-        class="caller-avatar"
-      />
+      <div *ngIf="showCallNotification" class="call-notification animate-slide-in">
+        <img
+          [src]="avatarMap.get(incomingCall!.senderName) || 'assets/avatar.png'"
+          alt="Caller Avatar"
+          class="caller-avatar"
+        />
         <div class="caller-info">
           <div class="caller-name">{{ incomingCall?.senderName }}</div>
-          <div class="caller-status">Incoming {{ incomingCall?.callType | titlecase }} Call...</div>
+          <div class="caller-status">
+            Incoming {{ incomingCall?.callType | titlecase }} Call...
+          </div>
         </div>
         <div class="actions">
-          <button (click)="acceptCall()" class="accept-btn">Accept</button>
-          <button (click)="declineCall()" class="decline-btn">Decline</button>
+          <button (click)="acceptCall()" class="accept-btn">
+            <i class="fas fa-phone"></i> Accept
+          </button>
+          <button (click)="declineCall()" style="background-color: #E53935; " class="decline-btn">
+            <i class="fas fa-phone-slash"></i> Decline
+          </button>
         </div>
       </div>
-
+    
       <ng-container *ngIf="privateChats$ | async as privateChats">
-        <div *ngFor="let chat of privateChats.get(recipient)"
-             class="message"
-             [class.sent]="chat.senderName === userService.getUserData().username"
-             [class.received]="chat.senderName !== userService.getUserData().username"
-             [class.editing]="isEditing && editingMessageId === chat.id">
-
-          <!-- Update the message content section -->
+        <div
+          *ngFor="let chat of privateChats.get(recipient)"
+          class="message"
+          [class.sent]="chat.senderName === userService.getUserData().username"
+          [class.received]="chat.senderName !== userService.getUserData().username"
+          [class.editing]="isEditing && editingMessageId === chat.id"
+        >
           <div class="message-content">
             {{ extractNewMessage(chat.message) }}
             <span *ngIf="chat.edited" class="edited-indicator">edited</span>
           </div>
-
-          <!-- Message options only for sent messages -->
-          <div *ngIf="chat.senderName === userService.getUserData().username"
-               class="message-options"
-               (click)="toggleOptionsMenu(chat.id, $event)">
+          <div
+            *ngIf="chat.senderName === userService.getUserData().username"
+            class="message-options"
+            (click)="toggleOptionsMenu(chat.id, $event)"
+          >
             <i class="fas fa-ellipsis-v"></i>
             <div class="message-options-menu" [class.show]="showOptionsMenu === chat.id">
               <button (click)="startEditMessage(chat.id, extractNewMessage(chat.message))">Edit</button>
               <button (click)="deleteMessage(chat.id)">Delete</button>
             </div>
           </div>
-
-          <!-- Edit input -->
-          <input *ngIf="isEditing && editingMessageId === chat.id"
-                 type="text"
-                 class="edit-input"
-                 [(ngModel)]="editingMessageContent"
-                 (keyup.enter)="saveEditedMessage()">
+          <input
+            *ngIf="isEditing && editingMessageId === chat.id"
+            type="text"
+            class="edit-input"
+            [(ngModel)]="editingMessageContent"
+            (keyup.enter)="saveEditedMessage()"
+          />
         </div>
       </ng-container>
     </div>
+    
 
     <!-- Input area -->
     <div class="chat-input">
@@ -82,9 +91,21 @@
              [(ngModel)]="message"
              (keyup.enter)="sendPrivateValue()"
              placeholder="Type a message...">
-      <button (click)="sendPrivateValue()">
-        <i class="bi bi-send"></i>
-      </button>
+      <div class="input-buttons">
+        <button class="emoji-button" (click)="toggleEmojiPicker()">
+          <i class="bi bi-emoji-smile"></i>
+        </button>
+        <div class="emoji-picker" *ngIf="showEmojiPicker">
+          <div class="emoji-grid">
+            <span *ngFor="let emoji of emojis" 
+                  (click)="addEmoji(emoji)" 
+                  class="emoji-item">{{ emoji }}</span>
+          </div>
+        </div>
+        <button (click)="sendPrivateValue()">
+          <i class="bi bi-send"></i>
+        </button>
+      </div>
     </div>
   </div>
 </div>

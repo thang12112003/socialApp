@@ -249,7 +249,7 @@
 				color: white;
 
 				&:hover {
-					background: darken(red, 10%);
+					background: darken(#ef4444, 10%);
 				}
 			}
 
@@ -310,11 +310,11 @@
 
 	.friendship-container {
 		padding: 20px 10px;
-
+		
 		.tab-navigation {
 			flex-direction: column;
 			padding: 0 10px;
-
+			
 			.tab-button {
 				width: 100%;
 			}

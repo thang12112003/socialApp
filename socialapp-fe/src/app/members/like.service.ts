@@ -28,7 +28,7 @@ export class LikeService {
   getLikes(predicate: string, pageNumber: number, pageSize: number) {
     let params = setPaginationHeaders(pageNumber, pageSize);
 
-    return this.http.get<Member[]>(`${this.api}/likes?predicate=${predicate}`, 
+    return this.http.get<Member[]>(`${this.api}/likes?predicate=${predicate}`,
       {observe: 'response', params}
     ).subscribe({
       next: response => {
@@ -45,11 +45,11 @@ export class LikeService {
   }
 
   getLikedIds() {
-    return this.http.get<string[]>(`${this.api}/likes/liked-by-me`).subscribe({
+    return this.http.get<string[]>(`${this.api}/likes/liked-posts`).subscribe({
       next: (ids) => {
         this.likeIds.set(ids);
       },
-    }); 
+    });
   }
 
   getLikedCount(userId: string) {

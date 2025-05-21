@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { AdminService } from '../admin.service';
 import { ToastrService } from 'ngx-toastr';
-import { SharedService } from '../../shared/shared.service';
+import { SharedService } from '../../shared/services/shared.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -41,12 +41,12 @@ export class AdminPanelComponent implements OnInit {
         this.adminService.lockAccount(userId).subscribe(
           () => {
             this.toastrService.success('Account locked successfully.');
-            
+
             const userIndex = this.users.findIndex(user => user.id === userId);
             if (userIndex !== -1) {
               this.users[userIndex].accountLocked = true;
             }
-            
+
             // Nếu bạn cũng sử dụng `filteredUsers`, hãy cập nhật nó tương tự
             const filteredUserIndex = this.filteredUsers.findIndex(user => user.id === userId);
             if (filteredUserIndex !== -1) {
@@ -61,7 +61,7 @@ export class AdminPanelComponent implements OnInit {
       }
     });
   }
-  
+
   unlockAccount(userId: any): void {
     this.sharedService.showNotification(
       true,
@@ -72,7 +72,7 @@ export class AdminPanelComponent implements OnInit {
         this.adminService.unlockAccount(userId).subscribe(
           () => {
             this.toastrService.success('Account unlocked successfully.');
-            this.loadUsers(); 
+            this.loadUsers();
           },
           error => {
             console.error('Error unlocking account:', error);
@@ -87,7 +87,7 @@ export class AdminPanelComponent implements OnInit {
     this.adminService.getAllUsers(this.currentPage, this.pageSize).subscribe(
       response => {
         console.log(response);
-        
+
         this.users = response.content;
         this.filteredUsers = this.users; // Initialize filtered users with full list
         this.totalElements = response.totalElements;

@@ -7,7 +7,7 @@
 body {
 	background-color: #28223F;
 	font-family: Montserrat, sans-serif;
-
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -271,14 +271,6 @@ footer {
 
             &:hover {
               background: darken(#8b5cf6, 10%);
-            }
-          }
-          &.btn-unfriend {
-            background:#ef4444;
-            color: white;
-
-            &:hover {
-              background: darken(red, 10%);
             }
           }
         }

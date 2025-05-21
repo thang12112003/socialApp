@@ -20,22 +20,21 @@ import {
   hasModifierKey
 } from "./chunk-USKC76VO.js";
 import {
-  fadeMotion
-} from "./chunk-XZIVNFZQ.js";
-import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
-import "./chunk-3JSU54FM.js";
-import "./chunk-IDCCK3LW.js";
-import {
   NzDestroyService
 } from "./chunk-P3OKEVSS.js";
 import "./chunk-J3OF5AMK.js";
 import "./chunk-IGQ5H5G3.js";
 import {
+  fadeMotion
+} from "./chunk-XZIVNFZQ.js";
+import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
+import "./chunk-3JSU54FM.js";
 import "./chunk-E5TUG3TZ.js";
 import {
   NzConfigService,
@@ -44,8 +43,9 @@ import {
 import {
   isNotNil
 } from "./chunk-444SWNZ7.js";
-import "./chunk-PBTJFNNQ.js";
 import "./chunk-RDJJSLCP.js";
+import "./chunk-IDCCK3LW.js";
+import "./chunk-PBTJFNNQ.js";
 import {
   DomSanitizer
 } from "./chunk-SHIUUSE2.js";

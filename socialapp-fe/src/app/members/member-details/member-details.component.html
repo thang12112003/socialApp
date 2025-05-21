@@ -81,6 +81,12 @@
                 </tab>
 
                 <tab heading="Photos">
+                  @if(images.length == 0){
+                    <div class="no-posts">
+                      <i class="bi bi-journal-x"></i>
+                      No photo to display
+                  </div>
+                  }
                   <div class="photos-grid">
                     <div class="photo-item" *ngFor="let image of images; let i = index" 
                          [lightbox]="i" [gallery]="galleryId">

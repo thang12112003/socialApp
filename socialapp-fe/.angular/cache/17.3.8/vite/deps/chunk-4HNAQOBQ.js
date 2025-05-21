@@ -1,16 +1,16 @@
 import {
-  NzWaveModule
-} from "./chunk-P5WCNQZS.js";
-import {
   NzTransitionPatchModule
 } from "./chunk-OACI3OD2.js";
 import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
+  NzWaveModule
+} from "./chunk-P5WCNQZS.js";
 import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
 import {
   NzConfigService,
   WithConfig
@@ -424,4 +424,4 @@ export {
   NzButtonGroupComponent,
   NzButtonModule
 };
-//# sourceMappingURL=chunk-Q542OV3V.js.map
+//# sourceMappingURL=chunk-4HNAQOBQ.js.map

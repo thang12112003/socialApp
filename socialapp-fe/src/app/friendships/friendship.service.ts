@@ -31,5 +31,4 @@ export class FriendshipService {
     deleteFriend(friendKnowAs: string): Observable<void> {
       return this.http.delete<void>(`${this.apiUrl}/friendships/delete/${friendKnowAs}`);
     }
-
 }

@@ -84,6 +84,4 @@ public class LikePostController {
                     .body(Collections.emptyList());
         }
     }
-
-
 }

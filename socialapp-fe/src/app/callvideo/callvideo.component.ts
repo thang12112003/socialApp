@@ -41,17 +41,15 @@ export class CallvideoComponent {
   root!: ElementRef;
 
   ngAfterViewInit() {
-    // Lấy dữ liệu từ localStorage
     const chatAppDataString = localStorage.getItem('chatApp');
 
-    // Chuyển đổi chuỗi JSON thành đối tượng
     const chatAppData = chatAppDataString ? JSON.parse(chatAppDataString) : {};
     const knowAs = chatAppData.knowAs || '';
     const urlParams = getUrlParams();
     const roomID = urlParams.get('roomID') || randomID(5);
     const userID = randomID(5);
     const userName = knowAs;
-    // generate token
+
     console.log(roomID)
     generateToken('https://nextjs-token.vercel.app/api', userID).then((res) => {
       const token = ZegoUIKitPrebuilt.generateKitTokenForProduction(
@@ -61,7 +59,7 @@ export class CallvideoComponent {
         userID,
         userName
       );
-      // create instance object from token
+      
       const zp = ZegoUIKitPrebuilt.create(token);
 
       console.log(
@@ -71,18 +69,8 @@ export class CallvideoComponent {
       // start the call
       zp.joinRoom({
         container: this.root.nativeElement,
-        // sharedLinks: [
-        //   {
-        //     name: 'Personal link',
-        //     url:
-        //       window.location.origin +
-        //       window.location.pathname +
-        //       '?roomID=' +
-        //       roomID,
-        //   },
-        // ],
         scenario: {
-          mode: ZegoUIKitPrebuilt.GroupCall, // To implement 1-on-1 calls, modify the parameter here to [ZegoUIKitPrebuilt.OneONoneCall].
+          mode: ZegoUIKitPrebuilt.GroupCall,
         },
       });
     });

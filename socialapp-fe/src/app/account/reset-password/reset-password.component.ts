@@ -1,11 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { AccountService } from '../account.service';
-import { SharedService } from '../../shared/shared.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { take } from 'rxjs';
 import { User } from '../../shared/models/account/user.model';
 import { ResetPassword } from '../../shared/models/account/reset-password.model';
+import { SharedService } from '../../shared/services/shared.service';
 
 @Component({
   selector: 'app-reset-password',

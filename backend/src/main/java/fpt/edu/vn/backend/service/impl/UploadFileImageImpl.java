@@ -75,7 +75,7 @@ import java.util.UUID;
         int userId = ((User) authentication.getPrincipal()).getId();
 
         if (photo.getUser().getId() != userId) {
-            throw new RuntimeException("Bạn không có quyền xóa ảnh này");
+            throw new RuntimeException("You do not have permission to delete this photo");
         }
 
         cloudinary.uploader().destroy(photo.getPublicId(), ObjectUtils.emptyMap());

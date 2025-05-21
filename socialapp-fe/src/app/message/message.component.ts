@@ -39,8 +39,20 @@ export class MessageComponent implements OnInit {
   private audio: HTMLAudioElement;
   private audioMessage: HTMLAudioElement;
   
-
-
+  public showEmojiPicker: boolean = false;
+  public emojis: string[] = [
+    '😀', '😃', '😄', '😁', '😅', '😂', '🤣', '😊',
+    '😇', '🙂', '🙃', '😉', '😌', '😍', '🥰', '😘',
+    '😗', '😙', '😚', '😋', '😛', '😝', '😜', '🤪',
+    '🤨', '🧐', '🤓', '😎', '🤩', '🥳', '😏', '😒',
+    '😞', '😔', '😟', '😕', '🙁', '☹️', '😣', '😖',
+    '😫', '😩', '🥺', '😢', '😭', '😤', '😠', '😡',
+    '🤬', '🤯', '😳', '🥵', '🥶', '😱', '😨', '😰',
+    '😥', '😓', '🤗', '🤔', '🤭', '🤫', '🤥', '😶',
+    '😐', '😑', '😬', '🙄', '😯', '😦', '😧', '😮',
+    '😲', '🥱', '😴', '🤤', '😪', '😵', '🤐', '🥴',
+    '🤢', '🤮', '🤧', '😷', '🤒', '🤕', '🤑', '🤠'
+  ];
 
   constructor(
     public userService: AccountService,
@@ -172,29 +184,6 @@ export class MessageComponent implements OnInit {
     }
   }
 
-  fetchLatestMessages(username: string) {
-    this.http.get<any>(`http://localhost:8080/messages/user/last/${username}`).subscribe((latestMessage) => {
-      if (latestMessage.receiverName && latestMessage.senderName) {
-        const chatPartner = latestMessage.senderName === username ? latestMessage.receiverName : latestMessage.senderName;
-        const currentChats = this.privateChats$.value;
-
-        if (currentChats.has(chatPartner)) {
-          const messages = currentChats.get(chatPartner)!;
-          const isMessageExist = messages.some(msg => msg.id === latestMessage.id);
-
-          if (!isMessageExist) {
-            messages.push(latestMessage);
-            this.privateChats$.next(new Map(currentChats));
-          }
-        } else {
-          this.addMessageToPrivateChats(chatPartner, latestMessage);
-        }
-
-        this.cdr.markForCheck();
-      }
-    });
-  }
-
   sendPrivateValue() {
     const userData = this.userService.getUserData();
     if (this.message.trim() !== '' && this.recipient !== '') {
@@ -202,24 +191,34 @@ export class MessageComponent implements OnInit {
             senderName: userData.username,
             receiverName: this.recipient,
             message: this.message,
-            status: 'MESSAGE',
+            status: 'MESSAGE'
         };
 
-        // // Tạm thời thêm tin nhắn vào giao diện người dùng ngay khi gửi
-        // this.addMessageToPrivateChats(this.recipient, chatMessage);
+        // Clear input first
+        const messageToSend = this.message;
         this.message = '';
 
-        // Gửi tin nhắn đến server
-        setTimeout(() => {
-            this.stompClient.send('/app/private-message', {}, JSON.stringify(chatMessage));
-            this.fetchLatestMessages(userData.username);
-            this.scrollToBottom();
-        });
+        // Optimistically add message to UI
+        const currentChats = new Map(this.privateChats$.value);
+        const optimisticMessage = {
+            ...chatMessage,
+            id: 'temp-' + Date.now(),
+            timestamp: new Date().toISOString()
+        };
+        
+        if (!currentChats.has(this.recipient)) {
+            currentChats.set(this.recipient, []);
+        }
+        currentChats.get(this.recipient)!.push(optimisticMessage);
+        this.privateChats$.next(currentChats);
+        this.scrollToBottom();
+
+        // Send to server
+        this.stompClient.send('/app/private-message', {}, JSON.stringify(chatMessage));
     }
 }
 
-
-  addMessageToPrivateChats(senderOrReceiver: string, message: any) {
+addMessageToPrivateChats(senderOrReceiver: string, message: any) {
     this.ngZone.run(() => {
         const currentChats = new Map(this.privateChats$.value);
         if (!currentChats.has(senderOrReceiver)) {
@@ -227,24 +226,38 @@ export class MessageComponent implements OnInit {
         }
 
         const existingMessages = currentChats.get(senderOrReceiver)!;
-        const messageExists = existingMessages.some(m => m.id === message.id);
+        
+        // Remove temporary message if this is the server response
+        const tempIndex = existingMessages.findIndex(m => 
+            m.id.toString().startsWith('temp-') && 
+            m.message === message.message &&
+            m.senderName === message.senderName
+        );
 
-        if (!messageExists) {
+        if (tempIndex !== -1) {
+            existingMessages[tempIndex] = message;
+        } else {
             existingMessages.push(message);
-            currentChats.set(senderOrReceiver, existingMessages);
-            this.privateChats$.next(currentChats);
+        }
 
-            const username = this.userService.getUserData().username;
-            const allMessages: any[] = [];
-            currentChats.forEach(messages => {
-                allMessages.push(...messages);
-            });
-            this.localStorageService.setMessages(username, allMessages);
+        currentChats.set(senderOrReceiver, existingMessages);
+        this.privateChats$.next(currentChats);
 
-            this.cdr.detectChanges();
+        const username = this.userService.getUserData().username;
+        const allMessages: any[] = [];
+        currentChats.forEach(messages => {
+            allMessages.push(...messages);
+        });
+        this.localStorageService.setMessages(username, allMessages);
+
+        this.cdr.detectChanges();
+        
+        // Scroll if this is a new message in the current chat
+        if (senderOrReceiver === this.recipient) {
+            this.scrollToBottom();
         }
     });
-  }
+}
 
   connect() {
     try {
@@ -302,10 +315,40 @@ export class MessageComponent implements OnInit {
             payloadData.receiverName : payloadData.senderName;
 
         if (payloadData.status !== 'CALL' && payloadData.id) {
-            this.addMessageToPrivateChats(chatPartner, payloadData);
-            this.scrollToBottom();
+            // Handle both new messages and edited messages
+            const currentChats = new Map(this.privateChats$.value);
+            if (!currentChats.has(chatPartner)) {
+                currentChats.set(chatPartner, []);
+            }
 
+            const existingMessages = currentChats.get(chatPartner)!;
+            
+            // Check if this is an edited message
+            const existingIndex = existingMessages.findIndex(m => m.id === payloadData.id);
+            if (existingIndex !== -1) {
+                // Update existing message
+                existingMessages[existingIndex] = { ...payloadData, edited: true };
+            } else {
+                // Add new message
+                existingMessages.push(payloadData);
+            }
+
+            currentChats.set(chatPartner, existingMessages);
+            this.privateChats$.next(currentChats);
+
+            // Update localStorage
+            const username = this.userService.getUserData().username;
+            const allMessages: any[] = [];
+            currentChats.forEach(messages => {
+                allMessages.push(...messages);
+            });
+            this.localStorageService.setMessages(username, allMessages);
+
+            this.cdr.detectChanges();
+
+            // Handle scrolling and notifications
             if (this.recipient === chatPartner) {
+                this.scrollToBottom();
                 const currentNewMessagesMap = this.newMessagesMap$.value;
                 currentNewMessagesMap.set(chatPartner, false);
                 this.newMessagesMap$.next(new Map(currentNewMessagesMap));
@@ -367,14 +410,37 @@ export class MessageComponent implements OnInit {
 
   saveEditedMessage() {
     if (this.editingMessageId && this.editingMessageContent.trim() !== '') {
+      const userData = this.userService.getUserData();
       const chatMessage = {
         id: this.editingMessageId,
         message: this.editingMessageContent,
         status: 'MESSAGE',
+        senderName: userData.username,
         receiverName: this.recipient
       };
 
       if (this.stompClient) {
+        // Optimistically update UI
+        const currentChats = new Map(this.privateChats$.value);
+        const messages = currentChats.get(this.recipient) || [];
+        const optimisticMessage = {
+          ...chatMessage,
+          id: this.editingMessageId,
+          timestamp: new Date().toISOString(),
+          edited: true
+        };
+        
+        const updatedMessages = messages.map(msg => {
+          if (msg.id === this.editingMessageId) {
+            return optimisticMessage;
+          }
+          return msg;
+        });
+        
+        currentChats.set(this.recipient, updatedMessages);
+        this.privateChats$.next(currentChats);
+        
+        // Send to server
         this.stompClient.send('/app/edit-message', {}, JSON.stringify(chatMessage));
         this.resetEditingState();
       }
@@ -430,6 +496,11 @@ export class MessageComponent implements OnInit {
     const currentNewMessagesMap = this.newMessagesMap$.value;
     currentNewMessagesMap.set(username, false);
     this.newMessagesMap$.next(new Map(currentNewMessagesMap));
+
+    // Add a small delay to ensure the chat content is loaded before scrolling
+    setTimeout(() => {
+      this.scrollToBottom();
+    }, 100);
   }
 
   toggleOptionsMenu(messageId: string, event: Event) {
@@ -441,9 +512,21 @@ export class MessageComponent implements OnInit {
     this.showOptionsMenu = null;
   }
 
-  @HostListener('document:click')
-  onDocumentClick() {
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    // Close options menu
     this.closeAllOptionsMenus();
+
+    // Close emoji picker
+    const emojiPicker = document.querySelector('.emoji-picker');
+    const emojiButton = document.querySelector('.emoji-button');
+    
+    if (emojiPicker && emojiButton) {
+      if (!emojiPicker.contains(event.target as Node) && 
+          !emojiButton.contains(event.target as Node)) {
+        this.showEmojiPicker = false;
+      }
+    }
   }
 
   extractNewMessage(message: string): string {
@@ -459,12 +542,34 @@ export class MessageComponent implements OnInit {
   }
 
   private scrollToBottom() {
+    // First immediate scroll
+    const chatMessages = document.querySelector('.chat-messages');
+    if (chatMessages) {
+        chatMessages.scrollTo({
+            top: chatMessages.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
+
+    // Second scroll after a brief delay to ensure rendering
     setTimeout(() => {
-      const chatMessages = document.querySelector('.chat-messages');
-      if (chatMessages) {
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-      }
+        if (chatMessages) {
+            chatMessages.scrollTo({
+                top: chatMessages.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
     }, 100);
+
+    // Final scroll after potential API delay
+    setTimeout(() => {
+        if (chatMessages) {
+            chatMessages.scrollTo({
+                top: chatMessages.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    }, 300);
   }
 
   randomID(len: number): string {
@@ -517,5 +622,13 @@ export class MessageComponent implements OnInit {
     this.incomingCall = null;
   }
 
+  toggleEmojiPicker() {
+    this.showEmojiPicker = !this.showEmojiPicker;
+  }
+
+  addEmoji(emoji: string) {
+    this.message += emoji;
+    this.showEmojiPicker = false;
+  }
 
 }

@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { SharedService } from '../../shared.service';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-test-error',
@@ -44,5 +44,5 @@ export class TestErrorComponent implements OnInit{
       error: (error) => console.error(error)
     });
   }
-  
+
 }

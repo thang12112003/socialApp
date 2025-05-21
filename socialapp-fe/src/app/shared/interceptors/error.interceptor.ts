@@ -23,7 +23,7 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
               }
               throw modalStateErrors.flat(); // "làm phẳng" mảng đa chiều thành một mảng phẳng
             } else {
-              toastr.error(error.error, error.status);
+              // toastr.error(error.error, error.status);
             }
             break;
           case 401:

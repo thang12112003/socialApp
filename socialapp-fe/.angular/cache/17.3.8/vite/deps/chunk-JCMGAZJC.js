@@ -6,21 +6,21 @@ import {
   NzFormNoStatusService,
   NzFormPatchModule,
   NzFormStatusService
-} from "./chunk-UUXJTYJM.js";
+} from "./chunk-T4NF55Q6.js";
 import {
   NzOutletModule,
   NzStringTemplateOutletDirective
 } from "./chunk-LLF5WQGB.js";
-import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
 import {
   NzResizeService
 } from "./chunk-P3OKEVSS.js";
 import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
 import {
   Platform
 } from "./chunk-E5TUG3TZ.js";
@@ -1214,4 +1214,4 @@ export {
   NzTextareaCountComponent,
   NzInputModule
 };
-//# sourceMappingURL=chunk-3YDFHP3I.js.map
+//# sourceMappingURL=chunk-JCMGAZJC.js.map

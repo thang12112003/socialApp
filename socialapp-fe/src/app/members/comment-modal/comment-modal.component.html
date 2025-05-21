@@ -1,0 +1,41 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">Bình luận</h5>
+    <button type="button" class="btn-close" (click)="modalRef.hide()" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <!-- Comment Input -->
+    <div class="comment-input">
+      <textarea class="form-control" [(ngModel)]="newComment" placeholder="Viết bình luận..." rows="3"></textarea>
+      <button class="btn btn-primary mt-2" (click)="addComment()" [disabled]="!newComment.trim()">Gửi</button>
+    </div>
+
+    <!-- Comment List -->
+    <div class="comment-list mt-3" *ngIf="comments.length > 0">
+      <ng-container *ngFor="let comment of comments">
+        <div class="comment" *ngIf="comment.user">
+          <div class="comment-header">
+            <img
+              [src]="getMainPhotoUrl(comment.user.photoUrl) || './assets/avatar.png'"
+              [alt]="comment.user.knowAs || 'Unknown User'"
+              class="comment-avatar"
+            >
+            <div class="comment-details">
+              <span class="comment-username">{{ comment.user.knowAs || 'Unknown User' }}</span>
+              <span class="comment-time">{{ comment.createdAt | timeago }}</span>
+            </div>
+            <div class="comment-actions" *ngIf="comment.user.id === currentUserId">
+              <button class="btn btn-link btn-sm" (click)="deleteComment(comment.id)">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </div>
+          <p class="comment-content">{{ comment.content }}</p>
+        </div>
+      </ng-container>
+    </div>
+    <div *ngIf="comments.length === 0" class="text-center">
+      Chưa có bình luận nào.
+    </div>
+  </div>
+</div>

@@ -22,8 +22,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: vegakinvietnam@gmail.com
-    password: cyagbmmpvozoocrh # Mật khẩu ứng dụng của Gmail
+    username: thangnguyen12112003@gmail.com
+    password: hbax snwz nfqk qmrs    # Mật khẩu ứng dụng của Gmail
     properties:
       mail:
         smtp:
@@ -35,9 +35,9 @@ spring:
         debug: true # Tùy chọn: Thêm để theo dõi chi tiết quá trình gửi email
 
 cloudinary:
-  cloud-name: ddp72k7ps
-  api-key: 345256146214767
-  api-secret: dUOhBa3dlz6ftsn6kXDPswOwWNk
+  cloud-name: dqfmh4yif
+  api-key: 795551377454287
+  api-secret: gM2_ZF5InTRzYT9imLH6jURcNQ4
 
 twilio:
   accountSid: ACe702fa96fb36ac1469d46978db4c47b2

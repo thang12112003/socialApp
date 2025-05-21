@@ -20,7 +20,7 @@ public class EmailSenderService {
 
         try {
             // Cấu hình người gửi
-            helper.setFrom("vegakinvietnam@gmail.com", "Connectzy Support"); // Đặt tên người gửi là "Connectzy Support"
+            helper.setFrom("vegakinvietnam@gmail.com", "Flynk Support"); // Đặt tên người gửi là "Flynk Support"
             helper.setTo(recipientEmail);
             helper.setSubject("Your Verification Code");
 
@@ -29,13 +29,13 @@ public class EmailSenderService {
                     + "<body style='font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px;'>"
                     + "<div style='max-width: 600px; margin: auto; background-color: #ffffff; padding: 20px; border-radius: 10px;'>"
                     + "<h2 style='color: #333;'>Hello!</h2>"
-                    + "<p style='font-size: 16px; color: #555;'>Welcome to <strong>Connectzy</strong>. Please find your verification code below:</p>"
+                    + "<p style='font-size: 16px; color: #555;'>Welcome to <strong>Flynk</strong>. Please find your verification code below:</p>"
                     + "<h3 style='font-size: 24px; color: #0066cc; text-align: center; padding: 10px;'>"
                     + verificationCode
                     + "</h3>"
                     + "<p style='font-size: 16px; color: #555;'>If you did not request this verification, please ignore this email.</p>"
                     + "<p style='font-size: 16px; color: #555;'>Best regards,</p>"
-                    + "<p style='font-size: 16px; color: #555;'>The Connectzy Team</p>"
+                    + "<p style='font-size: 16px; color: #555;'>The Flynk Team</p>"
                     + "</div>"
                     + "</body>"
                     + "</html>";

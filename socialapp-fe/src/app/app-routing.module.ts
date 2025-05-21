@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './shared/erors/not-found/not-found.component';
 import { authorizationGuard } from './shared/guard/authorization.guard';
+import { ListComponent } from './list/list.component';
 import { MessageComponent } from './message/message.component';
 import { TestErrorComponent } from './shared/erors/test-error/test-error.component';
 import { ServerErrorComponent } from './shared/erors/server-error/server-error.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [authorizationGuard],
     children: [
+      { path: 'list', component: ListComponent },
       { path: 'friendships', component: FriendshipComponent },
       { path: 'list-friendships', component: ListFriendsComponent },
       { path: 'message', component: MessageComponent },

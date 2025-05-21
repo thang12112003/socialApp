@@ -2,14 +2,10 @@ import {
   NzOptionComponent,
   NzSelectComponent,
   NzSelectModule
-} from "./chunk-LKVHJBAO.js";
+} from "./chunk-RM2CLEL3.js";
 import {
   NzI18nService
 } from "./chunk-EH3HCSPL.js";
-import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
 import {
   NzBreakpointEnum,
   NzBreakpointService,
@@ -18,6 +14,10 @@ import {
 import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
 import {
   NzConfigService,
   WithConfig
@@ -1631,4 +1631,4 @@ export {
   NzPaginationComponent,
   NzPaginationModule
 };
-//# sourceMappingURL=chunk-LH3NYH4U.js.map
+//# sourceMappingURL=chunk-CELEYW6W.js.map

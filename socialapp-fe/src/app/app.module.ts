@@ -9,6 +9,7 @@ import { jwtInterceptor } from './shared/interceptors/jwt.interceptor';
 import { provideHttpClient, withInterceptors, withJsonpSupport } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ListComponent } from './list/list.component';
 import { MessageComponent } from './message/message.component';
 import { errorInterceptor } from './shared/interceptors/error.interceptor';
 import { loadingInterceptor } from './shared/interceptors/loading.interceptor';
@@ -37,6 +38,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
   declarations: [
     AppComponent,
     NavbarComponent,
+    ListComponent,
     MessageComponent,
     FriendshipComponent,
     ListFriendsComponent,

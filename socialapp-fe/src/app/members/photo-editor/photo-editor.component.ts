@@ -48,7 +48,7 @@ export class PhotoEditorComponent implements OnInit {
 
         this.memberChange.emit(updateMember);
 
-        this.toastr.success('Đặt ảnh đại diện thành công');
+        this.toastr.success('Set avatar successfully');
       },
     });
   }
@@ -61,7 +61,7 @@ export class PhotoEditorComponent implements OnInit {
         const updateMember = { ...this.member() };
         updateMember.photos = updateMember.photos.filter(x => x.id !== photo.id);
         this.memberChange.emit(updateMember);
-        this.toastr.success('Xóa ảnh thành công');
+        this.toastr.success('Photo deleted successfully');
       },
       complete: () => {
         console.log('Delete photo successfully!');
@@ -103,9 +103,9 @@ export class PhotoEditorComponent implements OnInit {
       // Nếu tất cả các file đều đã tải lên thành công
       if (uploadedFiles === totalFiles) {
         if (totalFiles === 1) {
-          this.toastr.success('Thêm ảnh thành công');
+          this.toastr.success('Add photo successfully!');
         } else {
-          this.toastr.success('Thêm tất cả ảnh thành công');
+          this.toastr.success('Add all photos successfully');
         }
 
         // Đặt lại sau khi hoàn tất

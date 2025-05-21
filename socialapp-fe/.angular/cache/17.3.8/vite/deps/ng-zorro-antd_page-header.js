@@ -6,14 +6,13 @@ import {
   NzStringTemplateOutletDirective
 } from "./chunk-LLF5WQGB.js";
 import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
-import "./chunk-3JSU54FM.js";
-import "./chunk-IDCCK3LW.js";
-import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
+import "./chunk-3JSU54FM.js";
 import "./chunk-E5TUG3TZ.js";
 import {
   NzConfigService,
@@ -22,6 +21,7 @@ import {
 import {
   PREFIX
 } from "./chunk-444SWNZ7.js";
+import "./chunk-IDCCK3LW.js";
 import "./chunk-PBTJFNNQ.js";
 import "./chunk-SHIUUSE2.js";
 import "./chunk-C4KMBTLC.js";

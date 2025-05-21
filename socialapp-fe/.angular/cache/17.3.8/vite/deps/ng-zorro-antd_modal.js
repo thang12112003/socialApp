@@ -7,22 +7,22 @@ import {
   CdkDragHandle
 } from "./chunk-5YYYVCRJ.js";
 import {
+  NzButtonComponent,
+  NzButtonModule
+} from "./chunk-4HNAQOBQ.js";
+import {
+  NzTransitionPatchDirective
+} from "./chunk-OACI3OD2.js";
+import {
+  NzWaveDirective
+} from "./chunk-P5WCNQZS.js";
+import {
   NzI18nService
 } from "./chunk-EH3HCSPL.js";
 import "./chunk-5JIJJDAK.js";
 import {
   overlayZIndexSetter
 } from "./chunk-X4OLXUW3.js";
-import {
-  NzButtonComponent,
-  NzButtonModule
-} from "./chunk-Q542OV3V.js";
-import {
-  NzWaveDirective
-} from "./chunk-P5WCNQZS.js";
-import {
-  NzTransitionPatchDirective
-} from "./chunk-OACI3OD2.js";
 import {
   Overlay,
   OverlayConfig,
@@ -50,12 +50,6 @@ import {
   NzOutletModule,
   NzStringTemplateOutletDirective
 } from "./chunk-LLF5WQGB.js";
-import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
-import "./chunk-3JSU54FM.js";
-import "./chunk-IDCCK3LW.js";
 import "./chunk-P3OKEVSS.js";
 import {
   reqAnimFrame
@@ -64,6 +58,11 @@ import "./chunk-IGQ5H5G3.js";
 import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
+import "./chunk-3JSU54FM.js";
 import "./chunk-E5TUG3TZ.js";
 import {
   NzConfigService
@@ -74,7 +73,6 @@ import {
   isPromise,
   warn
 } from "./chunk-444SWNZ7.js";
-import "./chunk-PBTJFNNQ.js";
 import "./chunk-XUXDTRYK.js";
 import {
   animate,
@@ -83,6 +81,8 @@ import {
   transition,
   trigger
 } from "./chunk-RDJJSLCP.js";
+import "./chunk-IDCCK3LW.js";
+import "./chunk-PBTJFNNQ.js";
 import "./chunk-SHIUUSE2.js";
 import "./chunk-C4KMBTLC.js";
 import {

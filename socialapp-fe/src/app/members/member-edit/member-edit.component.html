@@ -7,9 +7,19 @@
           <!-- Profile Header -->
           <div class="rounded-top text-white d-flex flex-row position-relative">
             <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-              <img [src]="member.photoUrl || './assets/avatar.png'"
-                   alt="Profile Image"
-                   class="img-fluid img-thumbnail mt-4 mb-2">
+              <div class="profile-image-container" (click)="triggerFileInput()">
+                <img [src]="member.photoUrl || './assets/avatar.png'"
+                     alt="Profile Image"
+                     class="img-fluid img-thumbnail mt-4 mb-2">
+                <div class="profile-image-overlay">
+                  <i class="bi bi-camera"></i>
+                </div>
+              </div>
+              <input #fileInput
+                     type="file"
+                     class="d-none"
+                     accept="image/*"
+                     (change)="onAvatarFileSelected($event)">
             </div>
             <div class="ms-3" style="margin-top: 130px;">
               <h5 class="profile-name">{{member.knowAs}}</h5>
@@ -87,11 +97,11 @@
 
                         @if (states$().length) {
                           <div class="form-group">
-                            <label>State</label>
+                            <label>City</label>
                             <select formControlName="stateId"
                                     class="form-select"
                                     (change)="onStateChange($event)">
-                              <option value="" disabled>Select a state</option>
+                              <option value="" disabled>Select a city</option>
                               @for (state of states$(); track state.id) {
                                 <option [value]="state.id">{{ state.name }}</option>
                               }
@@ -101,9 +111,9 @@
 
                         @if (cities$().length) {
                           <div class="form-group">
-                            <label>City</label>
+                            <label>State</label>
                             <select formControlName="cityId" class="form-select">
-                              <option value="" disabled>Select a city</option>
+                              <option value="" disabled>Select a state</option>
                               @for (city of cities$(); track city.id) {
                                 <option [value]="city.id">{{ city.name }}</option>
                               }
@@ -112,18 +122,6 @@
                         }
                       </div>
                     </div>
-
-                    <!-- <div class="form-section">
-                      <div class="form-check privacy-toggle">
-                        <input type="checkbox"
-                               class="form-check-input"
-                               id="isPrivate"
-                               formControlName="isPrivate">
-                        <label class="form-check-label" for="isPrivate">
-                          Private Account
-                        </label>
-                      </div>
-                    </div> -->
 
                     <div class="action-buttons">
                       <button type="submit"

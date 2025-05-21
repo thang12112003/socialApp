@@ -1,6 +1,6 @@
 import {
   NzMenuDirective
-} from "./chunk-QN4URNPT.js";
+} from "./chunk-ZGMVFKXR.js";
 import "./chunk-X4OLXUW3.js";
 import "./chunk-Z7PSAAGN.js";
 import "./chunk-OX22V73U.js";
@@ -8,23 +8,22 @@ import "./chunk-PXNY5WLW.js";
 import "./chunk-DEGCIOYJ.js";
 import "./chunk-I3C6U56M.js";
 import "./chunk-USKC76VO.js";
-import "./chunk-XZIVNFZQ.js";
 import "./chunk-LLF5WQGB.js";
-import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
-import "./chunk-3JSU54FM.js";
-import "./chunk-IDCCK3LW.js";
 import {
   NzBreakpointService,
   siderResponsiveMap
 } from "./chunk-P3OKEVSS.js";
 import "./chunk-J3OF5AMK.js";
 import "./chunk-IGQ5H5G3.js";
+import "./chunk-XZIVNFZQ.js";
 import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
+import "./chunk-3JSU54FM.js";
 import {
   Platform
 } from "./chunk-E5TUG3TZ.js";
@@ -33,9 +32,10 @@ import {
   inNextTick,
   toCssPixel
 } from "./chunk-444SWNZ7.js";
-import "./chunk-PBTJFNNQ.js";
 import "./chunk-XUXDTRYK.js";
 import "./chunk-RDJJSLCP.js";
+import "./chunk-IDCCK3LW.js";
+import "./chunk-PBTJFNNQ.js";
 import "./chunk-VVZUMN77.js";
 import "./chunk-SHIUUSE2.js";
 import "./chunk-C4KMBTLC.js";

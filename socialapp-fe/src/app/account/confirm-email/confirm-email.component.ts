@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { AccountService } from '../account.service';
-import { SharedService } from '../../shared/shared.service';
+import { SharedService } from '../../shared/services/shared.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { count, take } from 'rxjs';
 import { User } from '../../shared/models/account/user.model';

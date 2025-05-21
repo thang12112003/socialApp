@@ -1,6 +1,6 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { SharedService } from '../shared.service';
+import { SharedService } from '../services/shared.service';
 import { delay, finalize } from 'rxjs';
 
 export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
@@ -10,9 +10,7 @@ export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
 
   const shouldBypass = req.url.includes('http://localhost:8080/messages') || req.url.includes('friendships/status')
   || /http:\/\/localhost:8080\/api\/v1\/post\?userId=\d+/.test(req.url)
-  || req.url.includes('friendships/count')
-  ||req.url.includes('like/toggle')
-  ||req.url.includes('like/count');
+  || req.url.includes('friendships/count');
 
   if (shouldBypass) {
     return next(req);

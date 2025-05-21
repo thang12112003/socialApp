@@ -45,10 +45,6 @@ import {
   ZoomOutOutline
 } from "./chunk-3JSU54FM.js";
 import {
-  IconDirective,
-  IconService
-} from "./chunk-IDCCK3LW.js";
-import {
   Platform
 } from "./chunk-E5TUG3TZ.js";
 import {
@@ -57,6 +53,10 @@ import {
 import {
   warn
 } from "./chunk-444SWNZ7.js";
+import {
+  IconDirective,
+  IconService
+} from "./chunk-IDCCK3LW.js";
 import {
   DomSanitizer
 } from "./chunk-SHIUUSE2.js";
@@ -503,4 +503,4 @@ export {
   provideNzIconsPatch,
   NzIconModule
 };
-//# sourceMappingURL=chunk-3TUHMKZG.js.map
+//# sourceMappingURL=chunk-PUPELI3W.js.map

@@ -114,5 +114,39 @@
     background-color: rgba(255, 0, 0, 1);
   }
   
+  .form-select {
+    width: 180px; /* Điều chỉnh độ rộng phù hợp */
+    padding: 8px 12px; /* Tăng padding để nhìn thoáng hơn */
+    border: 2px solid #007bff; /* Viền màu xanh của Bootstrap */
+    border-radius: 8px; /* Bo góc mềm mại */
+    font-size: 16px; /* Tăng kích thước chữ */
+    color: #333; /* Màu chữ tối hơn cho dễ nhìn */
+    background-color: #fff; /* Nền trắng */
+    transition: all 0.3s ease-in-out; /* Hiệu ứng mượt */
+  }
+  
+  /* Hiệu ứng khi rê chuột vào */
+  .form-select:hover {
+    border-color: #0056b3; /* Viền đậm hơn */
+  }
+  
+  /* Hiệu ứng khi chọn */
+  .form-select:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Hiệu ứng đổ bóng */
+  }
+  
+  /* Tùy chỉnh option */
+  .form-select option {
+    padding: 10px;
+    background: #fff;
+    color: #333;
+  }
+  
+  /* Nếu muốn đậm hơn cho option được chọn */
+  .form-select option:checked {
+    background-color: #007bff;
+    color: white;
+  }
   
 

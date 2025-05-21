@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { AccountService } from '../account.service';
 import { Router } from '@angular/router';
-import { SharedService } from '../../shared/shared.service';
+import { SharedService } from '../../shared/services/shared.service';
 import { ToastrService } from 'ngx-toastr';
 import { Country } from '../../shared/models/user/country.model';
 import { City } from '../../shared/models/user/city.model';
@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private toastr: ToastrService,
-    private modalService: BsModalService 
+    private modalService: BsModalService
   ) {
     const user = accountService.user$();
     if (user) {
@@ -75,7 +75,7 @@ export class RegisterComponent implements OnInit {
       const birthDate = new Date(control.value);
       let age = today.getFullYear() - birthDate.getFullYear();
       const monthDiff = today.getMonth() - birthDate.getMonth();
-      
+
       if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
         age--;
       }
@@ -93,25 +93,25 @@ export class RegisterComponent implements OnInit {
   register() {
     this.submitted = true;
     this.errorMessage = [];
-  
+
     if (this.registerForm.valid) {
       const formValues = { ...this.registerForm.value };
-  
+
       if (formValues.dateOfBirth) {
         const dob = new Date(formValues.dateOfBirth);
         formValues.dateOfBirth = dob.toISOString().split('T')[0];
       }
-  
+
       this.accountService.register(formValues).subscribe({
         next: _ => {
           this.accountService.setEmail(formValues.email);
           const initialState = {};
-          this.modalRef = this.modalService.show(VerificationComponent, { 
-            initialState 
+          this.modalRef = this.modalService.show(VerificationComponent, {
+            initialState
            });
           this.modalRef.content.verified.subscribe((verified: boolean) => {
             if (verified) {
-              this.modalRef?.hide(); 
+              this.modalRef?.hide();
               this.router.navigateByUrl('/account/login');
             }
           });
@@ -119,15 +119,15 @@ export class RegisterComponent implements OnInit {
         error: (error) => {
           if (error.error.errors) {
             this.errorMessage = error.error.errors;
-            this.toastr.error(error.error.errors);
+            // this.toastr.error(error.error.errors);
           } else {
             this.errorMessage.push(error.error);
-            this.toastr.error(error.error);
+            // this.toastr.error(error.error);
           }
         }
       });
     }
   }
-  
-  
+
+
 }

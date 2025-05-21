@@ -4,7 +4,148 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5816be4-95d9-4ade-a334-7dd79abdd662" name="Changes" comment="add friends" />
+    <list default="true" id="a5816be4-95d9-4ade-a334-7dd79abdd662" name="Changes" comment="add friends">
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/angular17/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/angular17/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-3YDFHP3I.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-3YDFHP3I.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-5YYYVCRJ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-5YYYVCRJ.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-AS34ECB5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-AS34ECB5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-DFVOL3SW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-DFVOL3SW.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-LH3NYH4U.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-LH3NYH4U.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-LKVHJBAO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-LKVHJBAO.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-NBOEXJE7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-NBOEXJE7.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-O4TCHRGW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-O4TCHRGW.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-OX22V73U.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-OX22V73U.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-Q542OV3V.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-Q542OV3V.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-QN4URNPT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-QN4URNPT.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-QOADIZDA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-QOADIZDA.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-TKF6CAVD.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-TKF6CAVD.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-WFN6SJLD.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-WFN6SJLD.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-X4OLXUW3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-X4OLXUW3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-XOYDFHMQ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-XOYDFHMQ.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-Z7PSAAGN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/chunk-Z7PSAAGN.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_affix.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_affix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_anchor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_anchor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_auto-complete.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_auto-complete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_back-top.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_back-top.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_badge.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_badge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_breadcrumb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_cascader.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_cascader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_checkbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_code-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_code-editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_collapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_collapse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_cron-expression.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_cron-expression.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_date-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_date-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_descriptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_descriptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_image.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_input-number.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_input-number.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_mention.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_mention.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_message.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_notification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_page-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_page-header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_popconfirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_popconfirm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_popover.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_popover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_qr-code.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_qr-code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_rate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_rate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_result.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_segmented.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_segmented.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_statistic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_steps.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_steps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_switch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_time-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_time-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_timeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_transfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_transfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tree-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tree-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tree-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tree-view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/.angular/cache/17.3.8/vite/deps/ng-zorro-antd_upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/account/confirm-email/confirm-email.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/account/confirm-email/confirm-email.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/account/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/account/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/account/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/account/login/login.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/account/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/account/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/account/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/account/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/account/reset-password/reset-password.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/account/reset-password/reset-password.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/account/send-email/send-email.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/account/send-email/send-email.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/admin-panel/admin-panel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/admin-panel/admin-panel.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/admin-panel/admin-panel.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/admin-panel/admin-panel.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/admin-panel/admin-panel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/admin-panel/admin-panel.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/admin.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/post-by-user/post-by-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/post-by-user/post-by-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/user-manager/user-manager.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/admin/user-manager/user-manager.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/callvideo/callvideo.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/callvideo/callvideo.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/callvideo/callvideo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/callvideo/callvideo.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/friendships/friendship.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/friendships/friendship.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/friendships/friendship/friendship.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/friendships/friendship/friendship.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/friendships/list-friends/list-friends.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/friendships/list-friends/list-friends.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/friendships/list-friends/list-friends.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/friendships/list-friends/list-friends.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/edit-post-member/edit-post-member.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/edit-post-member/edit-post-member.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/edit-post-member/edit-post-member.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/edit-post-member/edit-post-member.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/like.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/like.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/list-post-member/list-post-member.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/list-post-member/list-post-member.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/list-post-member/list-post-member.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/list-post-member/list-post-member.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-details/member-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-details/member-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-details/member-details.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-details/member-details.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-details/member-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-details/member-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-edit/member-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-edit/member-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-edit/member-edit.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-edit/member-edit.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-edit/member-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/member-edit/member-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/members/photo-editor/photo-editor.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/members/photo-editor/photo-editor.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/message/message.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/message/message.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/message/message.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/message/message.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/message/message.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/message/message.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/navbar/navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/erors/test-error/test-error.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/erors/test-error/test-error.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/guard/authorization.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/guard/authorization.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/interceptors/error.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/interceptors/error.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/interceptors/loading.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/interceptors/loading.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/app/shared/shared.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/assets/logo/logo-main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/assets/logo/logo-small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socialapp-fe/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../socialapp-fe/src/styles.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +167,7 @@
         <option name="title" value="Current Branch" />
       </GitPushTagMode>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -40,8 +181,18 @@
     &quot;accountId&quot;: &quot;5ea673e7-0640-46bb-8a60-6de67464a72a&quot;
   }
 }</component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -51,7 +202,7 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2mSj1nwoE4Tcn23wbJ5PBA78BvU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -60,19 +211,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BackendApplication.executor": "Debug",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "Spring Boot.BackendApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FPT_APTECH/Project/backend",
+    "last_opened_file_path": "C:/Users/ACER NITRO/Downloads/pj2/pj2/backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,7 +236,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
     "vue.rearranger.settings.migration": "true"
   },
@@ -116,8 +271,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -205,7 +360,15 @@
       <workItem from="1731494266364" duration="4670000" />
       <workItem from="1731611543079" duration="43000" />
       <workItem from="1731612407377" duration="97000" />
-      <workItem from="1731612531808" duration="8987000" />
+      <workItem from="1731612531808" duration="4809000" />
+      <workItem from="1739778146917" duration="3024000" />
+      <workItem from="1739845604640" duration="1286000" />
+      <workItem from="1742379061230" duration="2114000" />
+      <workItem from="1742433835440" duration="892000" />
+      <workItem from="1742436718755" duration="194000" />
+      <workItem from="1747826395438" duration="1462000" />
+      <workItem from="1747829377188" duration="5750000" />
+      <workItem from="1747849150961" duration="5357000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -324,6 +487,10 @@
     <MESSAGE value="add friends" />
     <option name="LAST_COMMIT_MESSAGE" value="add friends" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -337,15 +504,19 @@
           <line>11</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/fpt/edu/vn/backend/controller/ChatController.java</url>
-          <line>141</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.StackOverflowError" package="java.lang" />
           <option name="timeStamp" value="6" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/fpt/edu/vn/backend/controller/FriendshipController.java</url>
+          <line>116</line>
+          <properties class="fpt.edu.vn.backend.controller.FriendshipController" method="deleteFriend">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/fpt/edu/vn/backend/service/impl/FriendshipService.java</url>
           <line>175</line>

@@ -19,7 +19,6 @@ import { ListPostMemberComponent } from '../list-post-member/list-post-member.co
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
     TimeagoModule,
     GalleryModule,
     LightboxModule,
@@ -54,7 +53,7 @@ export class MemberDetailsComponent implements OnInit {
   public FriendshipStatus = FriendshipStatus;
 
   member!: Member;
-  friendshipStatus: FriendshipStatus | null = null; 
+  friendshipStatus: FriendshipStatus | null = null;
 
   constructor(){
   }
@@ -65,7 +64,7 @@ export class MemberDetailsComponent implements OnInit {
       next: data => {
         this.member = data['member'];
         this.loadImages(this.member.photos);
-  
+
         // Sau khi có member, lấy trạng thái kết bạn
         this.memberService.getFriendshipStatus(this.member.id).subscribe({
           next: (status: Friendships) => {
@@ -85,7 +84,7 @@ export class MemberDetailsComponent implements OnInit {
         });
       }
     });
-  
+
     // Kiểm tra query params để điều hướng tab nếu có
     this.route.queryParams.subscribe({
       next: params => {
@@ -94,7 +93,7 @@ export class MemberDetailsComponent implements OnInit {
         }
       }
     });
-  }  
+  }
 
   onTabActivated(data: TabDirective) {
     this.activeTabs = data;

@@ -26,7 +26,7 @@ export class UserManagerComponent implements OnInit{
     const initState: ModalOptions = {
       class: 'modal-lg',
       initialState: {
-        title: 'Quyền người dùng',
+        title: 'User Rights',
         username: user.email,
         selectedRoles: [...user.roles],
         availableRoles: ['ADMIN','MODERATOR','MEMBER'],

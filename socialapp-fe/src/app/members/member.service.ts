@@ -16,6 +16,8 @@ import { MemberUpdateDto } from '../shared/models/user/member-update.model';
 import { Interest } from '../shared/models/user/interest.model';
 import { PostRequest } from '../shared/models/user/post.model';
 import { PostResponse, UserLikePost } from '../shared/models/user/post-response.model';
+import { CommentRequest } from '../shared/models/user/comment-request.model';
+import { CommentResponse } from '../shared/models/user/comment-response.model';
 
 @Injectable({
   providedIn: 'root'
@@ -41,7 +43,7 @@ import { PostResponse, UserLikePost } from '../shared/models/user/post-response.
   getStates = computed(() => this.states());
   getCities = computed(() => this.cities());
 
-  userLikePostIds = signal<number[]>([]); 
+  userLikePostIds = signal<number[]>([]);
 
   loadMembers(knowAs: string = '') {
     if (knowAs) {
@@ -310,6 +312,18 @@ import { PostResponse, UserLikePost } from '../shared/models/user/post-response.
   deletePhoto(photo: Photo) {
     return this.http.delete(`${this.api}/users/delete-image/${photo.id}`, { responseType: 'text' });
   }
+
+  addComment(postId: number, request: CommentRequest) {
+  return this.http.post(`${this.api}/comments/${postId}`, request);
+}
+
+  getCommentsByPost(postId: number) {
+    return this.http.get<CommentResponse[]>(`${this.api}/comments/${postId}`);
+  }
+
+  deleteComment(commentId: number) {
+  return this.http.delete(`${this.api}/comments/${commentId}`);
+}
 
 }
 

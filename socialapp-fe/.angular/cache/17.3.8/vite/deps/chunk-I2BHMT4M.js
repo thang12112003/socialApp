@@ -11,19 +11,19 @@ import {
   NzNoAnimationDirective
 } from "./chunk-I3C6U56M.js";
 import {
-  treeCollapseMotion
-} from "./chunk-XZIVNFZQ.js";
-import {
   NzOutletModule,
   NzStringTemplateOutletDirective
 } from "./chunk-LLF5WQGB.js";
 import {
-  NzIconDirective,
-  NzIconModule
-} from "./chunk-3TUHMKZG.js";
+  treeCollapseMotion
+} from "./chunk-XZIVNFZQ.js";
 import {
   Directionality
 } from "./chunk-XNKJYMG5.js";
+import {
+  NzIconDirective,
+  NzIconModule
+} from "./chunk-PUPELI3W.js";
 import {
   NzConfigService,
   WithConfig
@@ -3371,4 +3371,4 @@ export {
   NzTreeComponent,
   NzTreeModule
 };
-//# sourceMappingURL=chunk-QOADIZDA.js.map
+//# sourceMappingURL=chunk-I2BHMT4M.js.map

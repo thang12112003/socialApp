@@ -1,50 +1,75 @@
-<div class="container">
-  <div class="mb-3">
-    <input type="text" class="form-control" placeholder="Search by Known As or Email" [(ngModel)]="searchTerm"
-      (input)="onSearch()" />
+<div class="admin-container">
+  <div class="search-section">
+    <div class="search-wrapper">
+      <i class="bi bi-search search-icon"></i>
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="Search by Known As or Email" 
+        [(ngModel)]="searchTerm"
+        (input)="onSearch()" 
+      />
+    </div>
   </div>
-  <div *ngIf="users.length > 0" class="table-responsive shadow-sm p-3 mb-5 bg-body rounded">
-    <table class="table table-hover table-bordered">
-      <thead class="table-dark text-center">
+
+  <div *ngIf="users.length > 0" class="table-container">
+    <table class="admin-table">
+      <thead>
         <tr>
-          <th scope="col">Known As</th>
-          <th scope="col">Email</th>
-          <th scope="col">Role</th>
-          <th scope="col">config</th>
+          <th>Known As</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let user of filteredUsers">
-          <td>{{ user.knowAs }}</td>
-          <td>{{ user.email }}</td>
-          <td>{{ user.role }}</td>
           <td>
+            <div class="user-info">
+              <span class="user-name">{{ user.knowAs }}</span>
+            </div>
+          </td>
+          <td>
+            <span class="user-email">{{ user.email }}</span>
+          </td>
+          <td>
+            <span class="role-badge" [class.admin-role]="user.role === 'ADMIN'">
+              {{ user.role }}
+            </span>
+          </td>
+          <td class="actions-cell">
             @if (user.accountLocked === true) {
-            <button class="btn btn-sm btn-success" (click)="unlockAccount(user.id)">
-              UNLOCK <i class="bi bi-unlock"></i>
-            </button>
-            }@else {
-            <button class="btn btn-sm btn-warning" (click)="lockAccount(user.id)">
-              LOCK <i class="bi bi-lock"></i>
-            </button>
+              <button class="action-btn unlock-btn" (click)="unlockAccount(user.id)">
+                <i class="bi bi-unlock-fill"></i>
+                <span>Unlock</span>
+              </button>
+            } @else {
+              <button class="action-btn lock-btn" (click)="lockAccount(user.id)">
+                <i class="bi bi-lock-fill"></i>
+                <span>Lock</span>
+              </button>
             }
 
-            <button class="btn btn-sm mx-3" style="background: linear-gradient(
-              135deg,
-              #6366f1 0%,
-              #8b5cf6 100%); 
-              color:  white;"
-              (click)="navigateToUserPosts(user.id)">List post</button>
+            <button class="action-btn posts-btn" (click)="navigateToUserPosts(user.id)">
+              <i class="bi bi-file-text-fill"></i>
+              <span>Posts</span>
+            </button>
           </td>
-
         </tr>
       </tbody>
     </table>
 
-    <div class="d-flex justify-content-center mt-4">
-      <pagination [boundaryLinks]="true" [totalItems]="totalElements" [itemsPerPage]="pageSize"
-        (pageChanged)="onPageChanged($event)" [maxSize]="10" previousText="&lsaquo;" nextText="&rsaquo;"
-        firstText="&laquo;" lastText="&raquo;">
+    <div class="pagination-container">
+      <pagination 
+        [boundaryLinks]="true" 
+        [totalItems]="totalElements" 
+        [itemsPerPage]="pageSize"
+        (pageChanged)="onPageChanged($event)" 
+        [maxSize]="10" 
+        previousText="&lsaquo;" 
+        nextText="&rsaquo;"
+        firstText="&laquo;" 
+        lastText="&raquo;">
       </pagination>
     </div>
   </div>

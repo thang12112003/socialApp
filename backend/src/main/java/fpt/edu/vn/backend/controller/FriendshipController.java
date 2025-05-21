@@ -114,16 +114,15 @@ public class FriendshipController {
 
     // Xóa bạn bè
     @DeleteMapping("/delete/{friendKnowAs}")
-    public ResponseEntity<Void> deleteFriend(@AuthenticationPrincipal User currentUser, @PathVariable String friendKnowAs) {
+    public ResponseEntity<?> deleteFriend(@AuthenticationPrincipal User currentUser, @PathVariable String friendKnowAs) {
         try {
             friendshipService.deleteFriend(currentUser.getKnowAs(), friendKnowAs);
-            return ResponseEntity.noContent().build(); // Trả về mã 204
+            return ResponseEntity.ok("Friend deleted successfully");
         } catch (EntityNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            return ResponseEntity.status(NOT_FOUND).body(e.getMessage());
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+            return ResponseEntity.status(INTERNAL_SERVER_ERROR).body("Failed to delete friend");
         }
     }
-
 
 }
